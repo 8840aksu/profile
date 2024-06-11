@@ -1,38 +1,100 @@
 body {
-  /* background: rgb(20, 174, 176); */
-  /* background: linear-gradient(0deg, rgb(14, 15, 17, 1) 0%, #ff00e6 100%); */
+  background-color: black;
   background-repeat: no-repeat;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
 }
+
+/* for profile picture */
 #first-box {
   overflow: auto;
   height: 5rem;
   width: 5rem;
   border-radius: 5rem;
-  border: 1px solid black;
+  margin-top: 3rem;
+  background-image: url(https://i.pinimg.com/564x/ae/fd/d3/aefdd3124512b7a56257348ab145fd61.jpg);
+  background-position: center;
+  background-size: cover;
+  margin-bottom: 3rem;
 }
+
+/* for links */
 #second-box {
   display: flex;
   justify-content: center;
   align-items: center;
   width: 100vw;
   height: 4rem;
-  border: 1px solid black;
+  border: 0.1rem solid white;
   margin-top: 2rem;
   gap: 2rem;
+  background-color: black;
+  padding: 1rem;
 }
 
-#insta-box, #linked-box, #tweet-box ,#git-box{
+/* parent property for the links */
+#insta-box,
+#linked-box,
+#tweet-box,
+#git-box {
   display: flex;
   justify-content: center;
   align-items: center;
   height: 2.5rem;
   width: 2.5rem;
-  background-color: rgb(0, 0, 0);
-  /* border: 1px solid black; */
   font-size: 2rem;
   color: white;
+  border-radius: 3rem;
+  padding: 0.5rem;
+  text-decoration: none;
+}
+
+/* instagram sub property+hover effect */
+#insta-box {
+  background: #f09433;
+  background: -webkit-linear-gradient(
+    45deg,
+    #f09433 0%,
+    #e6683c 25%,
+    #dc2743 50%,
+    #cc2366 75%,
+    #bc1888 100%
+  );
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f09433', endColorstr='#bc1888',GradientType=1 );
+  transition: 0.6s;
+}
+#insta-box:hover {
+  opacity: 0.6;
+}
+
+/* linkedin sub property + hover effect */
+#linked-box {
+  background-color: #0072b1;
+  transition: 0.6s;
+}
+#linked-box:hover {
+  opacity: 0.6;
+}
+
+/* tweeter sub property + hover effect (need to be changed for 'X'*/
+#tweet-box {
+  background-color: #1da1f2;
+  transition: 0.7s;
+}
+#tweet-box:hover {
+  opacity: 0.6;
+}
+
+/* github sub property +hover effect */
+#git-box {
+  background-color: black;
+  transition: 0.7s;
+  border: 0.1rem solid white;
+}
+#git-box:hover {
+  background-color: white;
+  color: black;
+  border: 0.1rem solid black;
 }
